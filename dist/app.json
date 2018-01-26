@@ -1,1 +1,1 @@
-{"pages":["pages/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"list":[{"pagePath":"pages/index","text":"创建"},{"pagePath":"pages/index","text":"我的"}]}}
+{"pages":["pages/index","pages/info"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"list":[{"pagePath":"pages/index","text":"创建"},{"pagePath":"pages/info","text":"我的"}]}}

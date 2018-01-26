@@ -88,7 +88,7 @@
 
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: 'test'
+      navigationBarTitleText: '借还'
     }
     components = {
       panel: Panel,
@@ -187,8 +187,8 @@
           onlyFromCamera: true,
           success: (res) => {
             console.log(res)
-              }
-          })
+          }
+        })
       },
       communicate () {
         console.log(this.$name + ' tap')
@@ -231,14 +231,6 @@
         if (userInfo) {
           self.userInfo = userInfo
         }
-        self.normalTitle = '标题已被修改'
-
-        self.setTimeoutTitle = '标题三秒后会被修改'
-        setTimeout(() => {
-          self.setTimeoutTitle = '到三秒了'
-          self.$apply()
-        }, 3000)
-
         self.$apply()
       })
     }
