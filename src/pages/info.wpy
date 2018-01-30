@@ -17,11 +17,11 @@
 </style>
 <template>
   <view class="container">
-    <view class="userinfo" @tap="handleViewTap">
-      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
-      <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
+    <view class="userinfo">
+      {{ items.Name }}的物品
     </view>
-    <toast />
+    <view>
+    </view>
   </view>
 </template>
 
@@ -47,13 +47,14 @@
       toast: Toast
     }
 
-    mixins = [testMixin]
-
     data = {
-      userInfo: {
-        nickName: '加载中...'
+      mynum: 20,
+      items: {
+        Name: '加载中...'
       }
     }
+
+    mixins = [testMixin]
 
     methods = {
       counterEmit (...args) {
@@ -77,6 +78,13 @@
         }
         self.$apply()
       })
+    }
+
+    onLoad(qdata) {
+      let self = this
+      console.log(qdata)
+      self.items.Name = qdata.item
+      self.$apply()
     }
   }
 </script>
